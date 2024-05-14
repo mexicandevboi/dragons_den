@@ -4,15 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic: The Gathering</title>
-    <link rel="stylesheet" href="css/tienda - css/menu.css">
     <link rel="icon" href="assets/tienda-Imgs/IconoLogo.png">
 
-    <!--xsi le puse el normalize tambien-->
-    <link rel="stylesheet" href="css/tienda - css/normalize.css">
-
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Magic: The Gathering</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/tienda - css/menu.css">
+    <link rel="stylesheet" href="css/normalize.css">
 
     <!--Para el menu de hamburguesa-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,41 +17,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/tienda - js/app.js" async></script>
-    <script>
-        function menuVer() {
-            var x = document.getElementById("Links2");
-            if (x.style.display === "inline") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "inline";
-            }
-        }
 
-    </script>
+
+    <script src="js/tienda - js/app.js" async></script>
+    <script src="js/index.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 
 
 
 
 <body>
-    <div id="header">
-        <header class="topnav">
-            <img id="logo" src="assets/tienda-Imgs/LogoBlanco.png">
-            <!-- Quiten como requieran -->
-            <div id="Links">
-                <button class="boton"><a href="Tienda.php">Inicio</a></button>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="menuVer()">
-                <i class="fa fa-bars"></i>
-            </a>
-
-        </header>
-        <div id="Links2">
-            <a href="Tienda.html">Inicio</a>
-        </div>
-    </div>
+    <?php include 'header.php'; ?>
 
     <div class="container mb-5">
         <div class="row">
@@ -84,7 +63,9 @@
                     </div>
 
                     <!-- boton para mandar el registro alineado a la derecha -->
-                    <button type="submit" class="btn btn-primary float-right">Registrarse</button>
+                    <div class="text-end mt-3">
+                        <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
+                    </div>
                 </form>
             </div>
         </div>
