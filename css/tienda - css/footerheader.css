@@ -1,0 +1,388 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap');
+
+
+
+/*COPIEN Y PEGUEN LA SIG LINEA PARA QUE PUEDAN USAR LAS VARIABLES EN SUS CSS* Este archivo debe de estar en la misma carpeta que su css*/
+/*@import "footerheader.css";*/
+ /* Usen estas variables para meter los colores, las tipografias y mayoria de los tamanos
+    para evitar inconsistencias entre las paginas. Si no saben como usar variables, 
+    aca abajito en los h1 se usan para que chequen la sintaxis*/
+ /* al chile les podria parecer mas facil escribir directo el valor pero esto nos asegura consistencia entre paginas xd*/
+:root{
+ --Perm: 'Inclusive Sans', sans-serif;
+ --contenido:'Roboto', sans-serif;
+ --rojo:#2991D6;
+ --rojoD: #971822;
+ --sangre: #3d1010;
+ --blanco: whitesmoke;
+ --grisClaro: #e5e5e5;
+ --grisOscuro: #aaaaaa;
+ --negro: #140E0E;
+ --verde: #62a243;
+ --tamContenido: 1rem;
+ --tamHF: 1.4rem;
+ --tamTitulos: 2.5rem;
+ --tamSub: 1.7rem;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--grisOscuro);
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--grisClaro);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rojoD);
+  transition: 0.7s;
+}
+
+/*Estilos generales, no cambiarlos y usarlos como se debe. Si tienen dudas en si usar estos o cambiarlos pregunten xd */
+/*OJO: tmb acuerdense de usar porcentajes y valores relativos lo mas que se pueda para no batallar tanto con lo responsivo*/
+h1{
+    font-family: var(--Perm);
+    font-size: var(--tamTitulos);
+    color: var(--rojo);
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+h2{
+    font-family: var(--Perm);
+    font-size: var(--tamSub);
+    color: var(--negro);
+    margin: 0;
+    padding: 1rem 2rem;
+}
+p{
+    font-family: var(--contenido);
+    font-size: var(--tamContenido);
+    color: var(--negro)
+}
+
+.cajas{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: fit-content;
+    height: auto;
+    text-align: center;
+}
+
+.boton{
+    padding: 0.5rem 1.5rem;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    border-radius: 0.8rem;
+}
+.boton a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: var(--tamContenido);
+    font-family: var(--contenido);
+}
+.boton:hover{
+    background-color: var(--rojoD);
+    transition: 0.2s;
+}
+
+.popup{
+  width: 90vmin;
+  padding: 0.5rem;
+  height: fit-content;
+  display: block;
+  top: 28vmin;
+  bottom: 20vmin;
+  right: 5vmin;
+  left: 5vmin;
+  margin: auto;
+  text-align: center;
+  font-size: var(--tamContenido);
+  color: var(--negro);
+  background-color: rgba(255, 255, 255, 0.924);
+  box-sizing: border-box;
+  border: 1px solid #666;
+  border-radius: 1em;
+  justify-content: space-around;
+  position: absolute;
+  justify-content: space-around;
+  z-index: 2;
+}
+.popup input{
+  border-radius: 0.5rem;
+  border: 1px solid var(--grisOscuro);
+}
+.popup .campos{
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 10px 5% 10px 5%;
+}
+.popup textarea{
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 10px 5% 10px 5%;
+  resize: none;
+}
+.popup .cerrar{
+  font-family: var(--contenido);
+  font-size: var(--tamTitulos);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 28px;
+  width: 28px;
+  border: 4px solid var(--rojoD);
+  border-radius: 50%;
+  transition: 0.5s;
+ 
+}
+.popup .cerrar:hover{
+  height: 30px;
+  width: 30px;
+}
+
+.cerrar:after {
+  position: absolute;
+  top: -4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\D7"; /* use the hex value here... */
+  font-size: 32px; 
+  color: var(--rojoD);
+  text-align: center;
+  transition: 0.5s;
+}
+
+
+
+/*Estos si muevanles si les dificulta el scroll son un misterio para mi xd*/
+body{
+    padding:0px;
+    margin:0px;
+    height: auto;
+  }
+  main{
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    background-color: var(--blanco);
+    background: linear-gradient(0deg, white 100%, var(--grisClaro) 30%);
+  }
+
+
+  /**Estos son de los ejemplos no los tienen que seguir xd**/
+#IgnorenEsto{
+    width: 50%;
+    height: 12rem;
+    text-align: center;
+    margin: 1rem 25%;
+    padding: 0;
+}
+#cajitaEj{
+    background-color: var(--rojo);
+}
+#cajitaEj p{
+    color: var(--blanco);
+}
+
+
+
+
+/********Seccion de header y footer********/
+
+#logo{
+    width: 10%;
+    height: auto;
+    padding: 1rem 2%;
+    display: block;
+    position: relative;
+}
+#header{
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  clear: both;
+  box-shadow: 0px 4px 8px var(--grisOscuro);
+  -webkit-box-shadow: 0px 4px 8px var(--grisOscuro);
+  -moz-box-shadow: 0px 4px 8px var(--grisOscuro);
+  z-index: 3;
+}
+header{
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    top:0;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    clear: both;
+}
+.topnav {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    background-color:var(--sangre);
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+  }
+  
+ #Links2 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: none;
+    clear: both;
+  }
+  
+#header a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: var(--tamSub);
+    font-family: var(--Perm);
+    display: block;
+    padding: 5px;
+    margin: 0  0.5rem;
+  }
+#header a:hover{
+  color: var(--rojo);
+}
+#Links .boton{
+    padding: 4px 1%;
+
+  }
+#Links{
+    width: 50%;
+    padding: 0 5%;
+    margin: 0 0.5rem;
+    height: fit-content;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position: relative;
+  }
+#header a.icon {
+    background: var(--sangre);
+    display: none;
+    position: relative;
+    padding: 1rem;
+  }
+  
+
+.active {
+    background-color: var(--rojo);
+    color: white;
+  }
+  #Links2{
+    font-size: var(--contenido);
+    background-color: var(--negro);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+  #Links2 a{
+    background-color: var(--negro);
+    margin: 0;
+    text-align: center;
+    border-bottom: 4px solid var(--rojo);
+  }
+  #Links2 a:last-child{
+    border-bottom: none;
+  }
+
+ 
+
+  footer{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 5%;
+    height: fit-content;
+    background-color: var(--negro);
+    color:var(--blanco);
+    overflow: hidden;
+    z-index: 3;
+  }
+
+ footer ul{
+    width: fit-content;
+    height: auto;
+    list-style: none;
+  }
+
+ footer ul li{
+    color: var(--blanco);
+ }
+
+ footer ul h2{
+    font-size: var(--tamHF);
+    color: var(--blanco);
+    padding: 0;
+    margin: 0;
+ }
+ footer ul a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: var(--Perm);
+
+ }
+ footer ul a:hover{
+    text-decoration: underline;
+    transition: 0.2s;
+ }
+ footer ul p{
+    color: var(--blanco);
+    font-family: var(--Perm);
+ }
+
+  @media screen and (max-width: 1024px) {
+    #logo{
+        width: 16%;
+    }
+  }
+
+ @media screen and (max-width: 875px){
+      #header a{
+        font-size: var(--tamHF);
+      }
+    }
+
+  @media screen and (max-width: 720px) {
+
+    
+    #logo{
+        width: 6rem;
+    }
+    #header a.icon {
+        display: block;
+
+      }
+    #Links{
+        display: none;
+    }
+  }
+  @media screen and(min-width: 720px){
+    #Links2{
+      display: none;
+  }
+  }

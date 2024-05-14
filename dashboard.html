@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/dashboard/tablas.js"></script>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <h1 class="mb-4">Dashboard</h1>
+
+        <h2 class="my-3">Usuarios</h2>
+        <table class="table" id="users-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo Electronico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add more rows for additional users -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- now display a table of orders and their totals, make sure to reference the user's name that issued the order-->
+    <div class="container">
+        <h2 class="my-3">Ordenes</h2>
+        <table class="table" id="orders-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Total</th>
+                    <th>Fecha de orden</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
